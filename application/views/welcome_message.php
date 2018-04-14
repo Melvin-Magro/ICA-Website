@@ -47,7 +47,7 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#<?php echo base_url();?>contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -235,20 +235,32 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <h2 class="section-heading">Contact us</h2>
             <hr class="my-4">
-            <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            <p class="mb-5">Have a question or require more information regarding something? Give us a call or send us an email and we will get back to you as soon as possible!</p>
           </div>
         </div>
         <div class="row">
+            <div class="col-lg-4 ml-auto text-center">
+              <i class="fa fa-user fa-3x mb-3 sr-contact"></i>
+              <p><strong>Director:</strong> Mr Tyrone Grima</p>
+            </div>
+            <div class="col-lg-4 ml-auto text-center">
+              <i class="fa fa-fax fa-3x mb-3 sr-contact"></i>
+              <p>Misraħ Għonoq,<br>Tarġa Gap Mosta, MST 1735</p>
+            </div>
           <div class="col-lg-4 ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>123-456-6789</p>
+            <p>+356 23987753</p>
+          </div>
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-fax fa-3x mb-3 sr-contact"></i>
+            <p>+356 21433205</p>
           </div>
           <div class="col-lg-4 mr-auto text-center">
             <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
+              <a href="mailto:adi@mcast.edu.mt">adi@mcast.edu.mt</a>
             </p>
           </div>
         </div>
