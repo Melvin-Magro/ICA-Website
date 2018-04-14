@@ -12,7 +12,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('vendor/bootstrap/css/extra.css'); ?>" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="<?php echo base_url('vendor/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
@@ -24,6 +23,7 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('css/creative.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('css/style.min.css'); ?>" rel="stylesheet">
 
   </head>
 
@@ -33,7 +33,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="<?php echo base_url();?>#page-top">
-          <img class="img-logo" src="img/portfolio/thumbnails/mainLogo.png" alt="">
+          <img class="img-logo" src="img/mainLogo.png" alt="">
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -60,15 +60,17 @@
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
+             <div class="colour">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
-              <strong>Your Favorite Source of Free Bootstrap Themes</strong>
+              <strong>Welcome to <span>Mcast</span></strong>
             </h1>
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+                  <p class="text-faded mb-5">Established in 2001, the Malta College of Arts, Science and Technology (MCAST) is the country's leading vocational education and training institution.</p>
+                  <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+          </div>
           </div>
         </div>
       </div>
