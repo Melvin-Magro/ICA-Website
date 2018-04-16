@@ -44,7 +44,7 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#services">Courses</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#courses">Courses</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#portfolio">Portfolio</a>
