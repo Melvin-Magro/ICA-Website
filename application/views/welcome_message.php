@@ -89,11 +89,11 @@
       </div>
     </section>
 
-    <section id="services">
+    <section id="courses">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">At Your Service</h2>
+            <h2 class="section-heading">Courses at ICA</h2>
             <hr class="my-4">
           </div>
         </div>
@@ -102,30 +102,32 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+              <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Foundation Collage</h3>
+              <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
+</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Ready to Ship</h3>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+              <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Technical Collage</h3>
+              <p class="text-muted mb-0">Provides further programmes at MQF Level 4 in closer collaboration with the industry.
+</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Up to Date</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+              <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Univeristy Collage</h3>
+              <p class="text-muted mb-0">Caters for higher education programmes and vocational degrees at MQF Levels 5, 6 and 7 while also working closely in collaboration with the industry. </p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Made with Love</h3>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+              <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Part-Time Courses</h3>
+              <p class="text-muted mb-0">Here one can find part-time courses which are held at MCAST ICA where one can acquire knowledge, discover a new hobby and explore more creativity.</p>
             </div>
           </div>
         </div>
@@ -251,7 +253,7 @@
               <p><strong>Director:</strong> Mr Tyrone Grima</p>
             </div>
             <div class="col-lg-4 ml-auto text-center">
-              <i class="fa fa-fax fa-3x mb-3 sr-contact"></i>
+              <i class="fa fa-map-marker fa-3x mb-3 sr-contact"></i>
               <p>Misraħ Għonoq,<br>Tarġa Gap Mosta, MST 1735</p>
             </div>
           <div class="col-lg-4 ml-auto text-center">
