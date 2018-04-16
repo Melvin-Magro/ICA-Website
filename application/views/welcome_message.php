@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>MCAST ICA</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
@@ -44,7 +44,7 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#services">Courses</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#portfolio">Portfolio</a>
@@ -103,7 +103,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Foundation Collage</h3>
+              <h3 class="mb-3"><b><a href="#foundationcollage" target="_self">Foundation Collage</a></b></h3>
               <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
 </p>
             </div>
@@ -111,7 +111,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Technical Collage</h3>
+              <h3 class="mb-3"><b><a href="#technicalcollage" target="_self">Technical Collage</a></b></h3>
               <p class="text-muted mb-0">Provides further programmes at MQF Level 4 in closer collaboration with the industry.
 </p>
             </div>
@@ -119,14 +119,14 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Univeristy Collage</h3>
+              <h3 class="mb-3"><b><a href="#universitycollage" target="_self">Univeristy Collage</a></b></h3>
               <p class="text-muted mb-0">Caters for higher education programmes and vocational degrees at MQF Levels 5, 6 and 7 while also working closely in collaboration with the industry. </p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Part-Time Courses</h3>
+              <h3 class="mb-3"><b><a href="#parttime" target="_self">Part-Time Courses</a></b></h3>
               <p class="text-muted mb-0">Here one can find part-time courses which are held at MCAST ICA where one can acquire knowledge, discover a new hobby and explore more creativity.</p>
             </div>
           </div>
