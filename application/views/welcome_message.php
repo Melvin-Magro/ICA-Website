@@ -69,7 +69,7 @@
           </div>
           <div class="col-lg-8 mx-auto">
                   <p class="text-faded mb-5">Established in 2001, the Malta College of Arts, Science and Technology (MCAST) is the country's leading vocational education and training institution.</p>
-                  <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+                  <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
           </div>
           </div>
         </div>
@@ -80,10 +80,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">We've got what you need!</h2>
+            <h2 class="section-heading text-white">Start your career with us</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+            <p class="text-faded mb-4">At MCAST, our aim is to provide professional expertise towards the delivery of the programmes and maintain the aim of driving forward all the areas of study under their respective responsibility.
+                This corporate structure enables each College to create focused strategies that address the specific needs of students at each level while maintaining a healthy dialogue with all interested stakeholders in order to provide the best programmes for the needs of the local economy and society.</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="http://www.mcast.edu.mt" target="_blank">Find out more</a>
           </div>
         </div>
       </div>
@@ -103,7 +104,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><a href="<?php echo "foundationcourses.php" ?>" target="_self">Foundation Collage</a></b></h3>
+              <h3 class="mb-3"><b><a href="#foundationcollage" target="_self">Foundation Collage</a></b></h3>
               <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
 </p>
             </div>
@@ -242,9 +243,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Contact us</h2>
+            <h2 class="section-heading">Contact Us</h2>
             <hr class="my-4">
-            <p class="mb-5">Have a question or require more information regarding something? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            <p class="mb-5">Email us with any questions or inquiries or give us a call. We will try and get back to you at the earliest convenience.</p>
           </div>
         </div>
         <div class="row">
@@ -285,5 +286,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+
   </body>
+
 </html>

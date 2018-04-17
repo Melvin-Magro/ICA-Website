@@ -13,5 +13,5 @@ class MY_Form_validation extends CI_Form_validation {
     public function set_error($field, $message) {
        $this->_field_data[$field]['error'] = $message;
     }
-
+    
 }
