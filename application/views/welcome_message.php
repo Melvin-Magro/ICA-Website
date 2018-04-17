@@ -103,7 +103,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><a href="#foundationcollage" target="_self">Foundation Collage</a></b></h3>
+              <h3 class="mb-3"><b><a href="<?php echo "foundationcourses.php" ?>" target="_self">Foundation Collage</a></b></h3>
               <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
 </p>
             </div>
@@ -285,7 +285,5 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
-
   </body>
-
 </html>
