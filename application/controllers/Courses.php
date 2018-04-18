@@ -41,7 +41,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 		switch ($name)
 		{
 			case 'foundation':
-				$this->foundation_course();
+				$this->foundation_courses();
 				break;
 
 			default:
@@ -49,13 +49,18 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 				break;
 		}
 
-		// $this->load->model('users_model');
-		//
-		// $data = array(
-		// 	'courses'	=> $this->users_model->all_courses()
-		// );
-		//
-		// $this->build('foundationcourses', $data);
+
+	}
+
+	private function foundation_courses()
+	{
+		$this->load->model('users_model');
+
+		$data = array(
+			'courses'	=> $this->users_model->all_courses()
+		);
+
+		$this->build('foundationcourses', $data);
 	}
 
 

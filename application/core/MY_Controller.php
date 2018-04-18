@@ -29,12 +29,12 @@ class MY_Controller extends CI_Controller {
 		$this->load->view('templates/nav', $nav);
 		$this->load->view($pages, $data);
 		$this->load->view('templates/end');
-
 	}
 
 	// Use an associative array for the navigation
 
 	function nav_links() {
+
 		return array(
 			'Home'			=> 'welcome/index',
 			'Student Form'	=> 'welcome/student',
@@ -43,6 +43,5 @@ class MY_Controller extends CI_Controller {
 			'Course List'	=> 'welcome/course'
 		);
 	}
-
 
 }
