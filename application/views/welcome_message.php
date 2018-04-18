@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MCAST ICA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo base_url('vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="<?php echo base_url('vendor/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="<?php echo base_url('vendor/magnific-popup/magnific-popup.css'); ?>" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="<?php echo base_url('css/creative.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('css/style.min.css'); ?>" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="<?php echo base_url();?>#page-top">
+          <img class="img-logo" src="img/mainLogo.png" alt="">
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#courses">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
@@ -11,7 +69,7 @@
           </div>
           <div class="col-lg-8 mx-auto">
                   <p class="text-faded mb-5">Established in 2001, the Malta College of Arts, Science and Technology (MCAST) is the country's leading vocational education and training institution.</p>
-                  <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+                  <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
           </div>
           </div>
         </div>
@@ -22,10 +80,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">We've got what you need!</h2>
+            <h2 class="section-heading text-white">Start your career with us</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+            <p class="text-faded mb-4">At MCAST, our aim is to provide professional expertise towards the delivery of the programmes and maintain the aim of driving forward all the areas of study under their respective responsibility.
+                This corporate structure enables each College to create focused strategies that address the specific needs of students at each level while maintaining a healthy dialogue with all interested stakeholders in order to provide the best programmes for the needs of the local economy and society.</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="http://www.mcast.edu.mt" target="_blank">Find out more</a>
           </div>
         </div>
       </div>
@@ -45,28 +104,23 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-<<<<<<< HEAD
-              <h3 class="mb-3"><b><?= anchor('courses/foundation', 'Foundation College')?></b></h3>
-              <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.</p>
-=======
-              <h3 class="mb-3"><b><a href="<?php echo "foundationcourses.php" ?>" target="_self">Foundation Collage</a></b></h3>
+              <h3 class="mb-3"><b><a href="#foundationcollage" target="_self">Foundation Collage</a></b></h3>
               <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
 </p>
->>>>>>> parent of 38db2a0... Index Page updates
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><a href="#technicalcollege" target="_self">Technical College</a></b></h3>
-              <p class="text-muted mb-0">Provides further programmes at MQF Level 4 in closer collaboration with the industry.</p>
+              <h3 class="mb-3"><b><a href="#technicalcollage" target="_self">Technical Collage</a></b></h3>
+              <p class="text-muted mb-0">Provides further programmes at MQF Level 4 in closer collaboration with the industry.
+</p>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><a href="#universitycollege" target="_self">Univeristy College</a></b></h3>
+              <h3 class="mb-3"><b><a href="#universitycollage" target="_self">Univeristy Collage</a></b></h3>
               <p class="text-muted mb-0">Caters for higher education programmes and vocational degrees at MQF Levels 5, 6 and 7 while also working closely in collaboration with the industry. </p>
             </div>
           </div>
@@ -189,9 +243,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Contact us</h2>
+            <h2 class="section-heading">Contact Us</h2>
             <hr class="my-4">
-            <p class="mb-5">Have a question or require more information regarding something? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            <p class="mb-5">Email us with any questions or inquiries or give us a call. We will try and get back to you at the earliest convenience.</p>
           </div>
         </div>
         <div class="row">
@@ -232,5 +286,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+
   </body>
+
 </html>
