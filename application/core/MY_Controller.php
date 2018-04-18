@@ -20,11 +20,13 @@ class MY_Controller extends CI_Controller {
 	// We can use this to replace $this->load->view
 	function build($pages = NULL, $data = NULL) {
 
-		$start = array(
+		$nav = array(
+			'shrink'	=> $this->router->class == 'home',
 			'nav'		=> $this->nav_links()
 		);
 
-		$this->load->view('templates/start', $start);
+		$this->load->view('templates/start');
+		$this->load->view('templates/nav', $nav);
 		$this->load->view($pages, $data);
 		$this->load->view('templates/end');
 

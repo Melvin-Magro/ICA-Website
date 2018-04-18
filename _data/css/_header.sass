@@ -15,5 +15,11 @@
             padding-bottom: 20px
 
 #mainNav
-    .navbar-nav > li.nav-item > a.nav-link, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus
-        color: white
+    .navbar-nav > li.nav-item
+        & > a.nav-link, a.nav-link:focus
+            color: white
+
+    &.do-not-shrink
+        .navbar-nav > li.nav-item
+            & > a.nav-link, a.nav-link:focus
+                color: black

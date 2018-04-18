@@ -49,7 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome'; //this can also be changed to another function in the controller.
+$route['default_controller'] = 'home'; //this can also be changed to another function in the controller.
+$route['courses/(:any)'] = 'courses/view/$1';
 
 //$route['custom/url'] = 'controller/function/etc';
 //route['profile/(:any)'] = 'students/profile/$1';
