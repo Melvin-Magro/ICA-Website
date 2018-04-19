@@ -104,7 +104,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><a href="#foundationcollage" target="_self">Foundation Collage</a></b></h3>
+               <h3 class="mb-3"><b><?= anchor('courses/foundation', 'Foundation College')?></b></h3>
               <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
 </p>
             </div>
@@ -112,7 +112,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><a href="#technicalcollage" target="_self">Technical Collage</a></b></h3>
+              <h3 class="mb-3"><b><?= anchor('courses/technical', 'Technical College')?></b></h3>
               <p class="text-muted mb-0">Provides further programmes at MQF Level 4 in closer collaboration with the industry.
 </p>
             </div>
@@ -286,6 +286,158 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+
+
+    <!--footer-->
+
+
+    <div class="cont">
+  <section id="sec1">
+    <div class="row">
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!--<section id="sec2">
+
+    <h2>Section 2</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="sec3">
+
+    <h2>Section 3</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="sec4">
+
+    <h2>Section 4</h2>
+
+    <div class="row">
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+
+        </ul>
+      </div>
+
+  </section>
+    </div>-->
+</div>
+<!-- /container -->
 
   </body>
 

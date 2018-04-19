@@ -35,27 +35,41 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 
 	}
 
-	public function view($name) //TO HIDE CONTROL YOU REMOVE INDEX FILE
+	// public function view($name) //TO HIDE CONTROL YOU REMOVE INDEX FILE
+	// {
+	//
+	// 	switch ($name)
+	// 	{
+	// 		case 'foundation':
+	// 			$this->foundation_courses();
+	// 			break;
+	//
+	// 		default:
+	// 			show_404();
+	// 			break;
+	// 	}
+	// }
+
+	public function foundation()
 	{
+		$this->load->model('users_model');
 
-		switch ($name)
-		{
-			case 'foundation':
-				$this->foundation_course();
-				break;
+		$data = array(
+			'courses'	=> $this->users_model->all_courses()
+		);
 
-			default:
-				show_404();
-				break;
-		}
+		$this->build('foundationcourses', $data);
+	}
 
-		// $this->load->model('users_model');
-		//
-		// $data = array(
-		// 	'courses'	=> $this->users_model->all_courses()
-		// );
-		//
-		// $this->build('foundationcourses', $data);
+	public function technical()
+	{
+		$this->load->model('users_model');
+
+		$data = array(
+			'courses'	=> $this->users_model->all_courses()
+		);
+
+		$this->build('technicalcourses', $data);
 	}
 
 
