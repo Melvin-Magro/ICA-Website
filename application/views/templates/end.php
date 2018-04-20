@@ -20,20 +20,21 @@
       </div>
       <div class="col-md-3">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Clients</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Logout</a></li>
+          <!--<li><a href="#">Clients</a></li>
+          <li><a href="#">Contact Us</a></li>-->
         </ul>
       </div>
-      <div class="col-md-3">
+
+     <!-- <div class="col-md-3">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Clients</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
-      </div>
+    </div>-->
     </div>
   </section>
 </div>
