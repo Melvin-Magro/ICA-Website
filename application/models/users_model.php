@@ -76,6 +76,23 @@ class Users_Model extends CI_Model {
 
         //gives us whatever the primary key with auto increment value is
         return $this->db->insert_id();
+    }
 
+    function can_login($email, $password)
+    {
+        $this->db->where('email', $email);
+        $this->db->where('password', $password);
+        //gets users from database
+        $query = $this->db->get('tbl_users');
+
+        //if we found a match for the user
+        if ($query->num_rows() > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
