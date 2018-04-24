@@ -5,7 +5,8 @@
         <title></title>
         <link rel="stylesheet" href="<?=base_url('css/style.css')?>">
     </head>
-    <body>
+    <body background = "img/background.jpg">
+        <img class="the_logo" src="img/mainLogo.png">
         <div class="login-box">
             <img src="img/avatar.jpg" class="avatar" alt="avatar">
             <h1>Login Here</h1>
