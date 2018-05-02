@@ -19,62 +19,33 @@ class Login extends MY_Controller { //changing the name of welcome to website
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-     function userlogin()
-     {
-         $data['title'] = 'Login Form';
-         $this->load->view("login", $data);
-     }
+     public function Sign_In()
+ 	{
+         $data = array(
+             'page_title'    => 'Login',
+             'form_action'   => 'login/submit',
+             'form'          => array(
+                 'Email'         => array(
+                     'type'          => 'email',
+                     'placeholder'   => 'me@example.com',
+                     'name'          => 'email',
+                     'id'            => 'input-email'
+                 ),
+                 'Password'      => array(
+                     'type'          => 'password',
+                     'placeholder'   => 'password',
+                     'name'          => 'password',
+                     'id'            => 'input-password'
+                 )
+             ),
+             'buttons'       => array(
+                 'submit'        => array(
+                     'type'          => 'submit',
+                     'content'       => 'Log In'
+                 )
+             )
+         );
 
-     function login_validation()
-     {
-         $this->load->library('form_validation');
-         $this->form_validation->set_rules('email', 'Email', 'required');
-         $this->form_validation->set_rules('password', 'Password', 'required');
-         //checks to see if it was successful in running the form. If not,
-         //leaves the user in login page.
-         if ($this->form_validation->run())
-         {
-             $email = $this->input->post('email');
-             $password = $this->input->post('password');
-
-             $this->load->model('users_model');
-             if ($this->users_model->can_login($email, $password))
-             {
-                 $session_data = array(
-                     'email'    => $email
-                 );
-                 $this->session->set_userdata($session_data);
-                 redirect(base_url() . 'index.php?/Login/enter');
-             }
-             else
-             {
-                $this->session->set_flashdata('error', 'Invalid Email and/or Password');
-                redirect(base_url() . 'index.php?/Login/userlogin');
-             }
-         }
-         else
-         {
-             $this->userlogin();
-         }
-     }
-
-     function enter()
-     {
-         if ($this->session->userdata('email') != '')
-         {
-             echo '<h2>Welcome - '.$this->session->userdata('email'). '<h2>';
-             echo '<a href="'.base_url().'index.php?/Login/logout">Logout</a>';
-         }
-
-         else
-         {
-             redirect(base_url() . 'index.php?/Login/userlogin');
-         }
-     }
-
-     function logout()
-     {
-         $this->session->unset_userdata('email');
-         redirect(base_url() . 'index.php?/Login/userlogin');
-     }
+         $this->load->view('login', $data);
+ 	}
  }

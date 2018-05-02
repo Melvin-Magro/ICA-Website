@@ -1,27 +1,39 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title></title>
-        <link rel="stylesheet" href="<?=base_url('css/style.css')?>">
+        <title><?=$page_title?></title>
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <link href="<?php echo base_url('css/style.min.css'); ?>" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     </head>
-    <body background = "img/background2.jpg">
-        <img class="the_logo" src="img/mainLogo.png">
-        <div class="login-box">
-            <img src="img/avatar.jpg" class="avatar" alt="avatar">
-            <h1>Login Here</h1>
-            <form method="post" action="<?= base_url(); ?>index.php?/Login/login_validation">
-                <div class="login">
-                    <p>Email</p>
-                    <input type="email" name="email" placeholder="Please Enter Email..." id="email"></br>
-                    <span class="text-error"><?= form_error('email'); ?></span>
-                    <p>Password</p>
-                    <input type="password" name="password" placeholder="Please Enter Password..." id="password">
-                    <span class="text-error"><?= form_error('password'); ?></span>
-                </div>
-                <input type="submit" name="insert" value="Login" class="subbutton" />
-                <?php echo $this->session->set_flashdata("error"); ?>
-            </form>
-        </div>
+    <body>
+        <div class="container">
+            <div class="card card-container">
+                <div class="color-box">
+                     <img class="login-logo" src="<?=base_url('img/mainLogoWhite.png')?>" alt="">
+                     <br>
+                <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+                <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                <p id="profile-name" class="profile-name-card"></p>
+                <?=form_open($form_action);?>
+                    <span id="reauth-email" class="reauth-email"></span>
+                    <?php foreach ($form as $key => $input): ?>
+
+                        <?=form_label($key.':', $input['id']);?>
+                        <?=form_input($input);?>
+                        <br>
+
+                    <?php endforeach; ?>
+                    <?=form_button($buttons['submit'])?>
+                <?=form_close();?>
+            </div><!--color-box-->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
     </body>
 </html>

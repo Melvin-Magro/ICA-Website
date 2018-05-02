@@ -20,7 +20,7 @@
       </div>
       <div class="col-md-3">
         <ul>
-          <li><a href="index.php?/Login/login_validation">Login</a></li>
+          <li><a href="index.php?/Login/Sign_In">Login</a></li>
           <li><a href="#">Logout</a></li>
           <!--<li><a href="#">Clients</a></li>
           <li><a href="#">Contact Us</a></li>-->
