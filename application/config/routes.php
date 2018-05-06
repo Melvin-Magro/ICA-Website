@@ -55,6 +55,12 @@ $route['default_controller'] = 'home'; //this can also be changed to another fun
 //$route['custom/url'] = 'controller/function/etc';
 //route['profile/(:any)'] = 'students/profile/$1';
 
+$route['login'] = 'system/Sign_In';
+$route['login/submit'] = 'system/login_submit';
+
+$route['register'] = 'system/register';
+$route['register/submit'] = 'system/register_submit';
+
 //AFTER YOU REMOVE INDEX.PHP TO HIDE CONTROLLER
 //$route['login'] = 'website/login'; (login is taparsi a function in welcome.php)
 //$route['register'] = 'website/login';

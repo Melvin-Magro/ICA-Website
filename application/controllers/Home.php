@@ -17,21 +17,15 @@ class Home extends MY_Controller { //changing the name of welcome to website
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	 *///TO HIDE CONTROL YOU REMOVE INDEX FILE
 
 
 
 
-	public function index() //TO HIDE CONTROL YOU REMOVE INDEX FILE
+	public function index()
 	{
-		$this->load->model('users_model');
 
-		$data = array(
-			'users'		=> $this->users_model->all_users(),
-			'courses'	=> $this->users_model->all_courses()
-		);
-
-		$this->build('welcome_message', $data);
+		$this->build('welcome_message');
 
 	}
 }

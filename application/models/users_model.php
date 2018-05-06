@@ -3,96 +3,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users_Model extends CI_Model {
 
-    public function all_users() {
-
-		// these lines are preparing the
-		// query to be run.
-		$this->db->select('tbl_student.*, tbl_course.course_name')
-                 ->join('tbl_course', 'tbl_student.course_id = tbl_course.id', 'LEFT')
-				 ->order_by('tbl_student.name', 'asc');
-
-		// run the query using the parameters
-		// above and below.
-		return $this->db->get('tbl_student');
-
-	}
-
-    public function all_courses() {
-
-		// these lines are preparing the
-		// query to be run.
-		$this->db->select('*');
-
-		// run the query using the parameters
-		// above and below.
-		return $this->db->get('tbl_course');
-
-    }
-
-    public function course_array() {
-
-        $array = array();
-
-		// these lines are preparing the
-		// query to be run.
-		$this->db->select('*');
-
-		// run the query using the parameters
-		// above and below.
-		$results = $this->db->get('tbl_course')->result_array();
-
-        foreach ($results as $item) {
-            $array[$item['id']] = $item['course_name'];
-        }
-
-        return $array;
-    }
-
-
-    /*
-    public function get_user($id) {
-
-        //run a query and return the row immediately
-        return $this->db->select('*')
-                ->where('id', $id)
-                ->get('tbl_student')
-                ->row_array();
-    }
-    */
-
-    public function add_user($name, $surname, $id_number, $email, $course_id) {
+    # Register a user into the first table
+    public function add_user($email, $password, $salt)
+    {
 
         $data = array(
-            'name'          => $name,
-            'surname'       => $surname,
-            'id_number'     => $id_number,
-            'email'         => $email,
-            'course_id'     => $course_id
+            'email'       => $email,
+            'password'    => password_hash($salt.$password, CRYPT_BLOWFISH),
+            'u_salt'        => strrev($salt)
         );
 
-        //An INSERT query:
-        // INSERT INTO tbl_users (cols) VALUES (cols)
-        $this->db->insert('tbl_student', $data);
+        $this->db->insert('tbl_users', $data);
 
-        //gives us whatever the primary key with auto increment value is
         return $this->db->insert_id();
     }
 
-    function can_login($email, $password)
-    {
-        $this->db->where('email', $email);
-        $this->db->where('password', $password);
-        //gets users from database
-        $query = $this->db->get('tbl_users');
 
-        //if we found a match for the user
-        if ($query->num_rows() > 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+    # Checks the user details table for unchanged/existing data
+    public function check_user_details($id, $name, $surname)
+    {
+
+        $data = array(
+            'user_id'       => $id,
+            'u_name'        => $name,
+            'u_surname'     => $surname
+        );
+
+        return $this->db->get_where('tbl_user_details', $data)->num_rows() == 1;
+    }
+
+
+    # Deletes a user from the database
+    public function delete_user($id)
+    {
+        $this->db->delete('tbl_users', array('id' => $id));
     }
 }
