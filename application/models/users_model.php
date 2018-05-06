@@ -38,4 +38,24 @@ class Users_Model extends CI_Model {
     {
         $this->db->delete('tbl_users', array('id' => $id));
     }
+
+    # Associate user details with the login data
+    public function user_details($id, $name, $surname)
+    {
+        if ($this->check_user_details($id, $name, $surname))
+        {
+            return TRUE;
+        }
+
+        $data = array(
+            'user_id'       => $id,
+            'u_name'        => $name,
+            'u_surname'     => $surname,
+            'u_creation'    => time()
+        );
+
+        $this->db->insert('tbl_user_details', $data);
+
+        return $this->db->affected_rows() == 1;
+    }
 }

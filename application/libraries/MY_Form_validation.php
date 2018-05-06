@@ -3,15 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MY_Form_validation extends CI_Form_validation {
 
-    //load the original code using the constructor
-    function __construct() {
-        parent::__construct();
+    # Load the configuration from the original class
+    function __construct($config = array())
+    {
+        parent::__construct($config);
     }
 
-    //set an error message without specifying rules
-    //the code here references the original library
-    public function set_error($field, $message) {
-       $this->_field_data[$field]['error'] = $message;
+    # Checks for the password strength
+    function password_strength($str) {
+        return (preg_match('#[0-9]#', $str) && preg_match("#[a-zA-Z]+#", $str));
     }
 
 }

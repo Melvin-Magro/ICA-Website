@@ -74,6 +74,7 @@ class System extends MY_Controller { //changing the name of welcome to website
     public function register_submit()
     {
         # 1. Check the form for validation errors
+        //var_dump($this->fv->run('register')); return;
         if ($this->fv->run('register') === FALSE)
         {
             echo validation_errors();
