@@ -16,12 +16,13 @@
           <li><?= anchor('courses/technical', 'Technical College')?></li>
           <li><?= anchor('courses/university', 'University College')?></li>
           <li><?= anchor('courses/part_time', 'Part-Time Courses')?></li>
+          <li><?= anchor('courses/upload_course', 'Upload Course')?></li>
         </ul>
       </div>
       <div class="col-md-3">
         <ul>
-          <li><a href="register">Register</a></li>
-          <li><a href="<?=site_url('sign_in');?>">Login</a></li>
+          <li><a href="index.php/register">Register</a></li>
+          <li><a href="index.php/sign_in">Login</a></li>
           <li><a href="#">Logout</a></li>
           <!--<li><a href="#">Clients</a></li>
           <li><a href="#">Contact Us</a></li>-->
