@@ -29,6 +29,36 @@ class System extends MY_Controller { //changing the name of welcome to website
 
 
 
+     public function login()
+     	{
+             $data = array(
+                 'page_title'    => 'Login',
+                 'form_action'   => 'login/submit',
+                 'form'          => array(
+                     'Email'         => array(
+                         'type'          => 'email',
+                         'placeholder'   => 'me@example.com',
+                         'name'          => 'email',
+                         'id'            => 'input-email'
+                     ),
+                     'Password'      => array(
+                         'type'          => 'password',
+                         'placeholder'   => 'password',
+                         'name'          => 'password',
+                         'id'            => 'input-password'
+                     )
+                 ),
+                 'buttons'       => array(
+                     'submit'        => array(
+                         'type'          => 'submit',
+                         'content'       => 'Log In'
+                     )
+                 )
+             );
+
+             $this->load->view('system/form', $data);
+     	}
+
      public function register()
 	{
         $data = array(
