@@ -147,7 +147,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 
         $this->course_model->add_course($course_name, $course_level);
 
-        echo "Good Job you submitted a form correctly what do you want a cookie ? Now bugger off!!";
+        redirect('courses/upload_course');
 
 	}
 }
