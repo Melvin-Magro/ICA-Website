@@ -55,8 +55,8 @@ $route['default_controller'] = 'home'; //this can also be changed to another fun
 //$route['custom/url'] = 'controller/function/etc';
 //route['profile/(:any)'] = 'students/profile/$1';
 
-$route['login'] = 'system/Sign_In';
-$route['login/submit'] = 'system/login_submit';
+$route['sign_in'] = 'system/sign_in';
+$route['sign_in/submit'] = 'system/sign_in_check';
 
 $route['register'] = 'system/register';
 $route['register/submit'] = 'system/register_submit';

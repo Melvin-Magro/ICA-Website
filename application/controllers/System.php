@@ -28,36 +28,84 @@ class System extends MY_Controller { //changing the name of welcome to website
 	 */
 
 
+     public function sign_in()
+     {
+          $data = array(
+              'page_title'    => 'Login',
+              'form_action'   => 'sign_in/submit',
+              'form'          => array(
+                  'Email'         => array(
+                      'type'          => 'email',
+                      'placeholder'   => 'me@example.com',
+                      'name'          => 'email',
+                      'id'            => 'input-email'
+                  ),
+                  'Password'      => array(
+                      'type'          => 'password',
+                      'placeholder'   => 'password',
+                      'name'          => 'password',
+                      'id'            => 'input-password'
+                  )
+              ),
+              'buttons'       => array(
+                  'submit'        => array(
+                      'type'          => 'submit',
+                      'content'       => 'Log In'
+                  )
+              )
+          );
 
-     public function login()
-     	{
-             $data = array(
-                 'page_title'    => 'Login',
-                 'form_action'   => 'login/submit',
-                 'form'          => array(
-                     'Email'         => array(
-                         'type'          => 'email',
-                         'placeholder'   => 'me@example.com',
-                         'name'          => 'email',
-                         'id'            => 'input-email'
-                     ),
-                     'Password'      => array(
-                         'type'          => 'password',
-                         'placeholder'   => 'password',
-                         'name'          => 'password',
-                         'id'            => 'input-password'
-                     )
-                 ),
-                 'buttons'       => array(
-                     'submit'        => array(
-                         'type'          => 'submit',
-                         'content'       => 'Log In'
-                     )
-                 )
-             );
+          $this->load->view('form', $data);
+     }
 
-             $this->load->view('system/form', $data);
-     	}
+     # This function is used to check for login errors
+    public function sign_in_check()
+    {
+        # 1. Check the form for validation errors
+        if ($this->fv->run('Sign_In') === FALSE)
+        {
+            echo validation_errors();
+            return;
+        }
+
+        #2. Retrieve the data for checking
+        $email     = $this->input->post('email');
+        $password  = $this->input->post('password');
+
+        #3. Use the System model to verify the password
+        # This avoid exposing information
+        $check = $this->system->check_password($email, $password);
+
+        #4. If check came back as false, the password is wrong
+        if ($check === FALSE)
+        {
+            echo "The email and password don't match.";
+            return;
+        }
+
+        #5. Retrieve the information from the database
+        $code = bin2hex($this->encryption->create_key(16));
+
+        #6. Try to log in
+        $data = $this->system->set_login_data($check, $code);
+
+        #7. Stops the code if there is any errors
+        if ($data === FALSE)
+        {
+            echo "Sorry, we were unable to log you in";
+            return;
+        }
+
+        #8. We'll check back in an hour
+        $data['refresh'] = time() + 60 * 60;
+
+        #9. Write everything to CodeIgiter's cookies
+        $this->session->set_userdata($data);
+
+        #10. Redirect home
+        redirect('home/success');
+
+    }
 
      public function register()
 	{
@@ -93,7 +141,7 @@ class System extends MY_Controller { //changing the name of welcome to website
             'buttons'       => array(
                 'submit'        => array(
                     'type'          => 'submit',
-                    'content'       => 'Log In'
+                    'content'       => 'Register'
                 )
             )
         );
@@ -148,33 +196,4 @@ class System extends MY_Controller { //changing the name of welcome to website
         redirect('/');
     }
 
-    public function Sign_In()
- 	{
-         $data = array(
-             'page_title'    => 'Login',
-             'form_action'   => 'login/submit',
-             'form'          => array(
-                 'Email'         => array(
-                     'type'          => 'email',
-                     'placeholder'   => 'me@example.com',
-                     'name'          => 'email',
-                     'id'            => 'input-email'
-                 ),
-                 'Password'      => array(
-                     'type'          => 'password',
-                     'placeholder'   => 'password',
-                     'name'          => 'password',
-                     'id'            => 'input-password'
-                 )
-             ),
-             'buttons'       => array(
-                 'submit'        => array(
-                     'type'          => 'submit',
-                     'content'       => 'Log In'
-                 )
-             )
-         );
-
-         $this->load->view('form', $data);
- 	}
  }

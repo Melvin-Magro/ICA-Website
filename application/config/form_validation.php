@@ -3,6 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $config = array(
 
+    # Login rules
+    'Sign_In'         => array(
+        array(
+            'field' => 'email',
+            'label' => 'Email',
+            'rules' => 'required|valid_email'
+        ),
+        array(
+            'field' => 'password',
+            'label' => 'Password',
+            'rules' => 'required'
+        )
+    ),
+
     # The register form rules
     'register'      => array(
         array(

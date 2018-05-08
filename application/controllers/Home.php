@@ -28,4 +28,9 @@ class Home extends MY_Controller { //changing the name of welcome to website
 		$this->build('welcome_message');
 
 	}
+
+	public function success()
+	{
+		echo "You are logged in :)";
+	}
 }
