@@ -12,11 +12,11 @@
       </div>
       <div class="col-md-3">
         <ul>
-          <li><?= anchor('courses/foundation', 'Foundation College')?></li>
-          <li><?= anchor('courses/technical', 'Technical College')?></li>
-          <li><?= anchor('courses/university', 'University College')?></li>
-          <li><?= anchor('courses/part_time', 'Part-Time Courses')?></li>
-          <li><?= anchor('courses/upload_course', 'Upload Course')?></li> 
+          <li><?= anchor('foundation', 'Foundation College')?></li>
+          <li><?= anchor('technical', 'Technical College')?></li>
+          <li><?= anchor('university', 'University College')?></li>
+          <li><?= anchor('part_time', 'Part-Time Courses')?></li>
+          <li><?= anchor('upload_course', 'Upload Course')?></li> 
         </ul>
       </div>
       <div class="col-md-3">

@@ -20,20 +20,28 @@ class Course_Model extends CI_Model {
 
     }
 
+    #NOBODY TOUCH THIS PLS GHAX TGHIDXK KEMM DOMT NIDGHI PLS TNX - LOVE REJXIL XOXOXOOX
 	public function all_courses($level = NULL) {
 
 		// these lines are preparing the
 		// query to be run.
 		$this->db->select('*')
-				 ->order_by('course_name', 'asc');
+				 ->order_by('course_level', 'asc');
 
-
-
-        if ($level != NULL)
+        if ($level == 2)
         {
-            $this->db->where('course_level', 6);
-
+            $this->db->where('course_level <=', 3);
         }
+        else if ($level == 4)
+        {
+            $this->db->where('course_level', 4);
+        }
+        else if ($level == 6)
+        {
+            $this->db->where('course_level >=', 5);
+        }
+
+
 		// run the query using the parameters
 		// above and below.
 		return $this->db->get('tbl_course');

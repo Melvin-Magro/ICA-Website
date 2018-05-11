@@ -60,24 +60,41 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 
 	public function foundation()
 	{
-        $this->load->model('course_model');
+        {
+            $this->load->model('course_model');
 
-        $data = array(
-			'courses'		=> $this->course_model->all_courses()
-		);
+            $data = array(
+    			'courses'		=> $this->course_model->all_courses(2)
+    		);
 
-		$this->load->view('foundation_courses');
+            $this->load->view('course_list', $data);
+        }
 	}
 
 	public function technical()
 	{
-		$this->load->model('users_model');
+        {
+            $this->load->model('course_model');
 
-		$data = array(
-			'courses'	=> $this->users_model->all_courses()
-		);
+            $data = array(
+    			'courses'		=> $this->course_model->all_courses(4)
+    		);
 
-		$this->build('technicalcourses', $data);
+            $this->load->view('course_list', $data);
+        }
+	}
+
+    public function university()
+	{
+        {
+            $this->load->model('course_model');
+
+            $data = array(
+    			'courses'		=> $this->course_model->all_courses(6)
+    		);
+
+            $this->load->view('course_list', $data);
+        }
 	}
 
 	public function upload_course($submit = FALSE)
@@ -151,14 +168,4 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 
 	}
 
-    public function all_courses()
-    {
-        $this->load->model('course_model');
-
-        $data = array(
-			'courses'		=> $this->course_model->all_courses(6)
-		);
-
-        $this->load->view('course_list', $data);
-    }
 }

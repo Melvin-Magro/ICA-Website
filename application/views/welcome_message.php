@@ -45,15 +45,7 @@
             <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box mt-5 mx-auto">
                 <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-                 <h3 class="mb-3"><b><?= anchor('all_courses', 'All Courses')?></b></h3>
-                <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-              <div class="service-box mt-5 mx-auto">
-                <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-                 <h3 class="mb-3"><b><?= anchor('courses/upload_course', 'Upload Course')?></b></h3>
+                 <h3 class="mb-3"><b><?= anchor('upload_course', 'Upload Course')?></b></h3>
                 <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
                 </p>
               </div>
@@ -61,7 +53,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-               <h3 class="mb-3"><b><?= anchor('courses/foundation', 'Foundation College')?></b></h3>
+               <h3 class="mb-3"><b><?= anchor('foundation', 'Foundation College')?></b></h3>
               <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
               </p>
             </div>
@@ -69,7 +61,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><?= anchor('courses/technical', 'Technical College')?></b></h3>
+              <h3 class="mb-3"><b><?= anchor('technical', 'Technical College')?></b></h3>
               <p class="text-muted mb-0">Provides further programmes at MQF Level 4 in closer collaboration with the industry.
               </p>
             </div>
@@ -77,7 +69,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><a href="#universitycollage" target="_self">Univeristy Collage</a></b></h3>
+              <h3 class="mb-3"><b><?= anchor('university', 'University College')?></b></h3>
               <p class="text-muted mb-0">Caters for higher education programmes and vocational degrees at MQF Levels 5, 6 and 7 while also working closely in collaboration with the industry. </p>
             </div>
           </div>
