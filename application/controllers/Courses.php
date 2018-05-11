@@ -60,13 +60,13 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 
 	public function foundation()
 	{
-		$this->load->model('users_model');
+        $this->load->model('course_model');
 
-		$data = array(
-			'courses'	=> $this->users_model->all_courses()
+        $data = array(
+			'courses'		=> $this->course_model->all_courses()
 		);
 
-		$this->build('foundationcourses', $data);
+		$this->load->view('foundation_courses');
 	}
 
 	public function technical()
@@ -150,4 +150,15 @@ class Courses extends MY_Controller { //changing the name of welcome to website
         redirect('courses/upload_course');
 
 	}
+
+    public function all_courses()
+    {
+        $this->load->model('course_model');
+
+        $data = array(
+			'courses'		=> $this->course_model->all_courses(6)
+		);
+
+        $this->load->view('course_list', $data);
+    }
 }

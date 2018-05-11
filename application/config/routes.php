@@ -61,6 +61,8 @@ $route['sign_in/submit'] = 'system/sign_in_check';
 $route['register'] = 'system/register';
 $route['register/submit'] = 'system/register_submit';
 
+$route['all_courses'] = 'courses/all_courses';
+
 //AFTER YOU REMOVE INDEX.PHP TO HIDE CONTROLLER
 //$route['login'] = 'website/login'; (login is taparsi a function in welcome.php)
 //$route['register'] = 'website/login';
