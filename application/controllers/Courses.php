@@ -67,7 +67,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
     			'courses'		=> $this->course_model->all_courses(2)
     		);
 
-            $this->load->view('course_list', $data);
+            $this->build('course_list', $data);
         }
 	}
 
@@ -80,7 +80,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
     			'courses'		=> $this->course_model->all_courses(4)
     		);
 
-            $this->load->view('course_list', $data);
+            $this->build('course_list', $data);
         }
 	}
 
@@ -93,7 +93,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
     			'courses'		=> $this->course_model->all_courses(6)
     		);
 
-            $this->load->view('course_list', $data);
+            $this->build('course_list', $data);
         }
 	}
 

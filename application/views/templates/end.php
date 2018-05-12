@@ -16,7 +16,7 @@
           <li><?= anchor('technical', 'Technical College')?></li>
           <li><?= anchor('university', 'University College')?></li>
           <li><?= anchor('part_time', 'Part-Time Courses')?></li>
-          <li><?= anchor('upload_course', 'Upload Course')?></li> 
+          <li><?= anchor('upload_course', 'Upload Course')?></li>
         </ul>
       </div>
       <div class="col-md-3">
