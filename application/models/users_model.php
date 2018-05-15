@@ -56,12 +56,14 @@ class Users_Model extends CI_Model {
         }
 
         return $this->db->select('tbl_users.id,
+                            tbl_role.name AS role,
                             tbl_users.email AS email,
                             tbl_user_details.u_name AS name,
                             tbl_user_details.u_surname AS surname,
                             tbl_login_info.u_persistence AS session_code')
                         ->join('tbl_user_details', 'tbl_user_details.user_id = tbl_users.id', 'left')
                         ->join('tbl_login_info', 'tbl_login_info.user_id = tbl_users.id', 'left')
+                        ->join('tbl_role', 'tbl_role.id = tbl_users.role_id', 'left')
                         ->where('tbl_users.id', $id)
                         ->get('tbl_users')
                         ->row_array();
@@ -106,5 +108,31 @@ class Users_Model extends CI_Model {
         $this->db->insert('tbl_user_details', $data);
 
         return $this->db->affected_rows() == 1;
+    }
+
+  # Check the user's credentials: the more info the better but slower
+    public function check_data($id, $email, $code)
+    {
+        $data = array(
+            'tbl_users.id'                  => $id,
+            'tbl_users.email'               => $email,
+            'tbl_login_info.u_persistence'  => $code
+        );
+
+        return $this->db->select('tbl_users.id')
+                        ->join('tbl_login_info', 'tbl_login_info.user_id = tbl_users.id', 'left')
+                        ->get_where('tbl_users', $data)
+                        ->num_rows() == 1;
+    }
+
+    # Removes the login data from the table (force the user to log out)
+    public function delete_session($id, $code)
+    {
+        $data = array(
+            'user_id'       => $id,
+            'u_persistence' => $code
+        );
+
+        $this->db->delete('tbl_login_info', $data);
     }
 }

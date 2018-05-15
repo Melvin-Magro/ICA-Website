@@ -103,9 +103,26 @@ class System extends MY_Controller { //changing the name of welcome to website
         $this->session->set_userdata($data);
 
         #10. Redirect home
-        redirect('home/success');
+        redirect('/');
 
     }
+
+    # The logout page
+  public function logout()
+  {
+      # 1. Remove the login data from the database
+      $data = $this->session->userdata;
+      $this->system->delete_session($data['id'], $data['session_code']);
+
+      # 2. Remove the information from the session.
+      $this->session->unset_userdata(array(
+          'id', 'email', 'name', 'surname', 'session_code'
+      ));
+
+      # 3. Take the user home
+      redirect('/');
+
+  }
 
      public function register()
 	{
