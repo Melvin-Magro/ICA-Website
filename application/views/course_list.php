@@ -17,6 +17,7 @@
   	<tr>
   		<td><?=$course['course_name'];?></td>
   		<td><?=$course['course_level'];?></td>
+		<td><?=anchor("courses/delete", "Delete");?></td>
   	</tr>
   <?php endforeach; ?>
   </tr>

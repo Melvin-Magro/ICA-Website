@@ -84,6 +84,7 @@ section .col-md-3:first-child {
     margin-left: auto;
     width: 70%;
     text-align: center;
+    margin-bottom: 350px;
 }
 
 #customers tr th {

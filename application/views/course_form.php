@@ -1,3 +1,5 @@
+<?="NB. Please use course level 1 for part-time courses."?>
+<br><br><br>
 <?=form_open($properties['action'], NULL, $properties['hidden'])?>
 <?=form_error('form')?>
   <?php foreach ($form as $key => $input):?>

@@ -97,6 +97,26 @@ class Courses extends MY_Controller { //changing the name of welcome to website
         }
 	}
 
+    public function part_time()
+	{
+        {
+            $this->load->model('course_model');
+
+            $data = array(
+    			'courses'		=> $this->course_model->all_courses(1)
+    		);
+
+            $this->build('course_list', $data);
+        }
+	}
+
+    public function delete()
+    {
+        $this->load->model('course_model');
+
+        $this->course_model->delete_course();
+    }
+
 	public function upload_course($submit = FALSE)
 	{
 	if ($submit == 'submit') {

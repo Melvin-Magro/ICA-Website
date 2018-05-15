@@ -65,6 +65,7 @@ $route['upload_course'] = 'courses/upload_course';
 $route['foundation'] = 'courses/foundation';
 $route['technical'] = 'courses/technical';
 $route['university'] = 'courses/university';
+$route['part_time'] = 'courses/part_time';
 
 //AFTER YOU REMOVE INDEX.PHP TO HIDE CONTROLLER
 //$route['login'] = 'website/login'; (login is taparsi a function in welcome.php)

@@ -28,7 +28,11 @@ class Course_Model extends CI_Model {
 		$this->db->select('*')
 				 ->order_by('course_level', 'asc');
 
-        if ($level == 2)
+        if ($level == 1)
+        {
+            $this->db->where('course_level', 1);
+        }
+        else if ($level == 2)
         {
             $this->db->where('course_level <=', 3);
         }
@@ -59,6 +63,13 @@ class Course_Model extends CI_Model {
 	// 	return $this->db->get('tbl_course');
     //
 	// }
+
+    public function delete_course()
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('tbl_course');
+        
+    }
 
     public function get_course($id) {
 

@@ -42,14 +42,6 @@
       </div>
       <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-              <div class="service-box mt-5 mx-auto">
-                <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-                 <h3 class="mb-3"><b><?= anchor('upload_course', 'Upload Course')?></b></h3>
-                <p class="text-muted mb-0"> Provides the best curricula and learning pedagogies for students follwing courses at Pathway and MQF Levels 1, 2 and 3.
-                </p>
-              </div>
-            </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
@@ -76,7 +68,7 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3"><b><a href="#parttime" target="_self">Part-Time Courses</a></b></h3>
+              <h3 class="mb-3"><b><?= anchor('part_time', 'Part-time Courses')?></b></h3>
               <p class="text-muted mb-0">Here one can find part-time courses which are held at MCAST ICA where one can acquire knowledge, discover a new hobby and explore more creativity.</p>
             </div>
           </div>
