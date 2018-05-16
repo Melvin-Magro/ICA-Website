@@ -65,7 +65,7 @@ class MY_Controller extends CI_Controller {
 		{
 			if (($cont == 'system' && ($page == 'logout' || $page == 'register')))
 			{
-				redirect('/');
+				redirect('http://icawebsite.local');
 			}
 		}
 	}
