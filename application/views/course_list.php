@@ -22,6 +22,7 @@
   		<td><?=$course['course_level'];?></td>
 <?php if ($can_delete): ?>
 		<td><?=anchor("courses/delete/{$course['id']}", "Delete");?></td>
+		<td><?=anchor("courses/edit/{$course['id']}", "Edit");?></td>
 <?php endif; ?>
   	</tr>
   <?php endforeach; ?>

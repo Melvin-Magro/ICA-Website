@@ -52,6 +52,6 @@ $config = array(
 				'field' => 'course_level',
 				'label' => 'course level',
 				'rules' => 'required|min_length[1]'
-			),
+			)
         )
 );

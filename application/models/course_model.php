@@ -79,4 +79,38 @@ class Course_Model extends CI_Model {
                 ->row_array();
     }
 
+    public function update_course($id, $course_name, $course_level) {
+
+            if ($this->check_course($id, $course_name, $course_level)) {
+                return TRUE;
+            }
+
+            //this is the data that needs to change
+            $data = array();
+
+            if (!empty($course_name)) $data['course_name'] = $course_name;
+            if (!empty($course_level)) $data['course_level'] = $course_level;
+
+        //this is the entire update query
+        $this->db->where('id', $id)
+                ->update('tbl_course', $data);
+
+        //TRUE or FALSE if there has been a change
+        return $this->db->affected_rows() == 1;
+
+    }
+
+    public function check_course($id, $course_name, $course_level) {
+
+            //this is the data that needs to change
+            $data = array('id' => $id);
+            if (!empty($course_name)) $data['course_name'] = $course_name;
+            if (!empty($course_level)) $data['course_level'] = $course_level;
+
+
+        //TRUE or FALSE if there has been a change
+        return $this->db->get_where('tbl_course', $data)->num_rows() == 1;
+
+    }
+
 }

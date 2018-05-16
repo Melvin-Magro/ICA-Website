@@ -119,13 +119,99 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 
     public function delete($id)
     {
-        if (TRUE) // doesn't have permission
-        {
-            show_404();
-        }
+        // if ('CAN_DELETE') // Ask sir about this
+        // {
+        //     show_404();
+        // }
 
         $this->load->model('course_model');
         $this->course_model->delete_course($id);
+
+        redirect('http://icawebsite.local/#courses');
+    }
+
+    public function edit($id = NULL)
+    {
+        if ($id == 'submit') {
+            $this->edit_submit();
+            return;
+        }
+
+        $this->load->model('course_model');
+        $user = $this->course_model->get_course($id);
+
+        if ($user == NULL)
+        {
+            show_404();
+            return;
+        }
+
+        $this->load->helper('form');
+
+        $data = array(
+            'properties'       => array(
+                'action'       => 'courses/edit/submit',
+                'hidden'       => array('user_id'   => $user['id'])
+            ),
+
+            'form'      => $this->user_form($user)
+        );
+
+        $this->load->view('course_form', $data);
+
+    }
+
+    public function edit_submit()
+    {
+        //load the form validation library
+		$this->load->library('form_validation');
+
+		// load the users_model
+		$this->load->model('course_model');
+
+		//set the rules for each input
+		//array(); -> empty array
+		//for the edit, it will depend on the inputs being filled in
+		$rules = array();
+
+		$course_name = $this->input->post('course_name');
+		if (!empty($course_name)) {
+            $rules[] = array( //this is so if no changes have been made, data will remain the same. in the square brackets we have number of array (0,1,2 etc)
+                'field' => 'course_name',
+				'label' => 'course name',
+				'rules' => 'required|min_length[5]'
+			);
+		}
+
+        $course_level = $this->input->post('course_level');
+		if (!empty($name)) {
+            $rules[] = array(
+                'field' => 'course_level',
+				'label' => 'course level',
+				'rules' => 'required|min_length[1]'
+			);
+		}
+
+		$id = $this->input->post('user_id');
+
+		//set the rules
+		$this->form_validation->set_rules($rules);
+
+		//check the form for validation errors
+		if ($this->form_validation->run() === FALSE) {
+			$this->edit($id);
+			return;
+		}
+
+		//reload the page
+		if (!$this->course_model->update_course($id, $course_name, $course_level)) {
+			$this->form_validation->set_error('form', 'The course could not be updated.');
+			$this->edit($id);
+			return;
+
+	}
+
+	$this->edit($id);
     }
 
 	public function upload_course($submit = FALSE)
@@ -156,10 +242,8 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 		//create an empty reference
 		if ($user == NULL) {
 			$user = array (
-				'email'		=> NULL,
-				'name'		=> NULL,
-				'surname'	=> NULL,
-				'mobile_no'	=> NULL
+				'course_name'		=> NULL,
+				'course_level'		=> NULL
 			);
 		}
 
