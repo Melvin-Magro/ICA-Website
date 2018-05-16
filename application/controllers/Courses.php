@@ -113,8 +113,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
     public function delete()
     {
         $this->load->model('course_model');
-
-        $this->course_model->delete_course();
+        $this->course_model->delete_course("$id");
     }
 
 	public function upload_course($submit = FALSE)

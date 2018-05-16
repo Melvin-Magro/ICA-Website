@@ -64,11 +64,10 @@ class Course_Model extends CI_Model {
     //
 	// }
 
-    public function delete_course()
+    public function delete_course($id)
     {
         $this->db->where('id', $id);
         $this->db->delete('tbl_course');
-        
     }
 
     public function get_course($id) {
