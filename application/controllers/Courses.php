@@ -66,7 +66,8 @@ class Courses extends MY_Controller { //changing the name of welcome to website
             $this->load->model('course_model');
 
             $data = array(
-    			'courses'		=> $this->course_model->all_courses(2)
+    			'courses'		=> $this->course_model->all_courses(2),
+                'can_delete'    => $this->has_permission('CAN_DELETE')
     		);
 
             $this->build('course_list', $data);
@@ -79,7 +80,8 @@ class Courses extends MY_Controller { //changing the name of welcome to website
             $this->load->model('course_model');
 
             $data = array(
-    			'courses'		=> $this->course_model->all_courses(4)
+    			'courses'		=> $this->course_model->all_courses(4),
+                'can_delete'    => $this->has_permission('CAN_DELETE')
     		);
 
             $this->build('course_list', $data);
@@ -90,10 +92,11 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 	{
         {
             $this->load->model('course_model');
+            //var_dump($this->session->userdata); exit;
 
             $data = array(
     			'courses'		=> $this->course_model->all_courses(6),
-                'can_delete' => FALSE
+                'can_delete'    => $this->has_permission('CAN_DELETE')
     		);
 
             $this->build('course_list', $data);
@@ -106,7 +109,8 @@ class Courses extends MY_Controller { //changing the name of welcome to website
             $this->load->model('course_model');
 
             $data = array(
-    			'courses'		=> $this->course_model->all_courses(1)
+    			'courses'		=> $this->course_model->all_courses(1),
+                'can_delete'    => $this->has_permission('CAN_DELETE')
     		);
 
             $this->build('course_list', $data);

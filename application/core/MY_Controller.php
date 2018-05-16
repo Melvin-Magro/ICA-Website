@@ -109,9 +109,12 @@ class MY_Controller extends CI_Controller {
 
       # 2. Retrieve the information we need
       $p_name = strtoupper($p_name);
-      $role = strtolower($this->session->userdata('role'));
-      $permissions = $this->config->item('permissions')[$role];
 
+      $role = strtolower($this->session->userdata('role'));
+
+
+	  if (!array_key_exists($role, $this->config->item('permissions'))) return FALSE;
+      $permissions = $this->config->item('permissions')[$role];
 
       # 3. check that the permission item actually exists
       if (!array_key_exists($p_name, $permissions)) return FALSE;
@@ -144,7 +147,7 @@ class MY_Controller extends CI_Controller {
 		if ($this->check_login() && $this->has_permission('REGISTER', 'UPLOAD_COURSE'))
 		{
 			$nav3['Register']						= 'register';
-			$nav3['Upload Course']			= 'upload_course';
+			$nav3['Upload Course']					= 'upload_course';
 		}
 		if ($this->check_login())
 		{

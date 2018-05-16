@@ -128,7 +128,7 @@ class System extends MY_Controller { //changing the name of welcome to website
 
       # 2. Remove the information from the session.
       $this->session->unset_userdata(array(
-          'id', 'email', 'name', 'surname', 'session_code'
+          'id', 'email', 'name', 'surname', 'session_code', 'role', 'refresh'
       ));
 
       # 3. Take the user home
