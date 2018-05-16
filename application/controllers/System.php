@@ -27,6 +27,18 @@ class System extends MY_Controller { //changing the name of welcome to website
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
+     public function index() //TO HIDE CONTROL YOU REMOVE INDEX FILE
+ 	{
+ 		$this->load->model('users_model');
+
+ 		$data = array(
+ 			'users'		=> $this->users_model->all_users(),
+ 			'courses'	=> $this->users_model->all_courses()
+ 		);
+
+ 		$this->build('welcome_message', $data);
+
+ 	}
 
      public function sign_in()
      {
@@ -103,7 +115,7 @@ class System extends MY_Controller { //changing the name of welcome to website
         $this->session->set_userdata($data);
 
         #10. Redirect home
-        redirect('/');
+        redirect('http://icawebsite.local');
 
     }
 
@@ -120,7 +132,7 @@ class System extends MY_Controller { //changing the name of welcome to website
       ));
 
       # 3. Take the user home
-      redirect('/');
+      redirect('http://icawebsite.local');
 
   }
 
@@ -210,7 +222,7 @@ class System extends MY_Controller { //changing the name of welcome to website
         }
 
         # 8. Everything is fine, return to the home page.
-        redirect('/');
+        redirect('http://icawebsite.local');
     }
 
  }
