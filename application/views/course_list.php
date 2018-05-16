@@ -11,13 +11,18 @@
   <tr>
 	<th>Course Name</th>
   	<th>Course Level</th>
+<?php if ($can_delete): ?>
+	<th>Actions</th>
+<?php endif; ?>
   </tr>
   <tr>
 	  <?php foreach($courses->result_array() as $course): ?>
   	<tr>
   		<td><?=$course['course_name'];?></td>
   		<td><?=$course['course_level'];?></td>
-		<td><?=anchor("courses/delete", "Delete");?></td>
+<?php if ($can_delete): ?>
+		<td><?=anchor("courses/delete/{$course['id']}", "Delete");?></td>
+<?php endif; ?>
   	</tr>
   <?php endforeach; ?>
   </tr>

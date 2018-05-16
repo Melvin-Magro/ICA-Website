@@ -32,6 +32,8 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 
 	public function index() //TO HIDE CONTROL YOU REMOVE INDEX FILE
 	{
+
+
 		$this->load->model('users_model');
 
 		$data = array(
@@ -90,7 +92,8 @@ class Courses extends MY_Controller { //changing the name of welcome to website
             $this->load->model('course_model');
 
             $data = array(
-    			'courses'		=> $this->course_model->all_courses(6)
+    			'courses'		=> $this->course_model->all_courses(6),
+                'can_delete' => FALSE
     		);
 
             $this->build('course_list', $data);
@@ -110,10 +113,15 @@ class Courses extends MY_Controller { //changing the name of welcome to website
         }
 	}
 
-    public function delete()
+    public function delete($id)
     {
+        if (TRUE) // doesn't have permission
+        {
+            show_404();
+        }
+
         $this->load->model('course_model');
-        $this->course_model->delete_course("$id");
+        $this->course_model->delete_course($id);
     }
 
 	public function upload_course($submit = FALSE)

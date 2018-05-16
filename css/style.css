@@ -17,6 +17,10 @@
     padding-bottom: 20px;
 }
 
+#mainNav.do-not-shrink {
+    background-color: white;
+}
+
 #mainNav.do-not-shrink .navbar-nav > li.nav-item > a.nav-link, #mainNav.do-not-shrink .navbar-nav > li.nav-item a.nav-link:focus {
     color: black;
 }
@@ -111,4 +115,9 @@ section .col-md-3:first-child {
     text-align: left;
     background-color: orange;
     color: white;
+}
+
+body {
+    height: auto;
+    min-height: calc(100vh - 188px);
 }
