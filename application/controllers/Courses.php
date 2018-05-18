@@ -225,7 +225,9 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 		$this->load->helper('form');
 		// this array will contain all the inputs we will need
 		$data = array(
+            'page_title'    => 'Upload Course',
 			'properties'	=> array(
+
 				'action'	=> 'courses/upload_course/submit',
 				'hidden'	=> NULL
 			),
