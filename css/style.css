@@ -56,10 +56,11 @@ section .col-md-3:first-child {
 }
 
 #sec1 .row a:hover {
-    color: #f05f40;
+    color: #b883ba;
 }
 
 #body-login {
+    background: -moz-linear-gradient(top, #b883ba 0%, #DCDCDC 100%) no-repeat;
     height: 725px;
 }
 
@@ -69,7 +70,6 @@ section .col-md-3:first-child {
 }
 
 #body-login .container .card .color-box, #body-login .container .card-container .color-box {
-    background: linear-gradient(red, yellow);
     padding: 30px 0 30px 0;
     width: 500px;
     margin-left: auto;
@@ -113,7 +113,7 @@ section .col-md-3:first-child {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: orange;
+    background-color: #b883ba;
     color: white;
 }
 

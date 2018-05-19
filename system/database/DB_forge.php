@@ -72,7 +72,7 @@ abstract class CI_DB_forge {
 	 *
 	 * @var	array
 	 */
-	public $primary_keys	= array();
+	public #b883ba_keys	= array();
 
 	/**
 	 * Database character set
@@ -234,10 +234,10 @@ abstract class CI_DB_forge {
 	 * Add Key
 	 *
 	 * @param	string	$key
-	 * @param	bool	$primary
+	 * @param	bool	#b883ba
 	 * @return	CI_DB_forge
 	 */
-	public function add_key($key, $primary = FALSE)
+	public function add_key($key, #b883ba = FALSE)
 	{
 		// DO NOT change this! This condition is only applicable
 		// for PRIMARY keys because you can only have one such,
@@ -245,17 +245,17 @@ abstract class CI_DB_forge {
 		// in the same, composite PRIMARY KEY.
 		//
 		// It's not the same for regular indexes.
-		if ($primary === TRUE && is_array($key))
+		if (#b883ba === TRUE && is_array($key))
 		{
 			foreach ($key as $one)
 			{
-				$this->add_key($one, $primary);
+				$this->add_key($one, #b883ba);
 			}
 
 			return $this;
 		}
 
-		if ($primary === TRUE)
+		if (#b883ba === TRUE)
 		{
 			$this->primary_keys[] = $key;
 		}

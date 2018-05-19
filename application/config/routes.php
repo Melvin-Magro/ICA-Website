@@ -62,6 +62,7 @@ $route['register'] = 'system/register';
 $route['register/submit'] = 'system/register_submit';
 
 $route['upload_course'] = 'courses/upload_course';
+// $route['edit'] = 'courses/edit/submit';
 $route['foundation'] = 'courses/foundation';
 $route['technical'] = 'courses/technical';
 $route['university'] = 'courses/university';

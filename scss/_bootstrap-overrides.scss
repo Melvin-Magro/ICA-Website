@@ -1,6 +1,6 @@
 // Bootstrap overrides for this template
 .text-primary {
-  color: $primary !important;
+  color: #b883ba !important;
 }
 
 .btn {
@@ -8,7 +8,7 @@
   text-transform: uppercase;
   border: none;
   border-radius: 300px;
-  @include sans-serif-font;
+  //@include sans-serif-font;
 }
 
 .btn-xl {
@@ -16,16 +16,16 @@
 }
 
 .btn-primary {
-  background-color: $primary;
-  border-color: $primary;
+  background-color: #b883ba;
+  border-color: #b883ba;
   &:hover,
   &:focus,
   &:active {
-    color: $white;
-    background-color: darken($primary, 5%) !important;
+    color: #fff;
+    background-color: darken(#b883ba, 5%) !important;
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(184, 131, 186,.5) !important;
   }
 }

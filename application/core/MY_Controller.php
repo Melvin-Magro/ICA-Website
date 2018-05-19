@@ -131,7 +131,7 @@ class MY_Controller extends CI_Controller {
 				"Home"				=> "#page-top",
 				"About"				=> "#about",
 				"Courses"			=> "#courses",
-				"Portfolio"		=> "#portfolio",
+				"Portfolio"			=> "#portfolio",
 				"Contact"			=> "#contact",
 		);
 

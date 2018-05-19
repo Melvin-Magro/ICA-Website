@@ -150,6 +150,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 
         $data = array(
             'properties'       => array(
+                'page_title'    => 'Edit Course',
                 'action'       => 'courses/edit/submit',
                 'hidden'       => array('user_id'   => $user['id'])
             ),
