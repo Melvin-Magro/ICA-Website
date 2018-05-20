@@ -149,8 +149,8 @@ class Courses extends MY_Controller { //changing the name of welcome to website
         $this->load->helper('form');
 
         $data = array(
+            'page_title'    => 'Edit Course',
             'properties'       => array(
-                'page_title'    => 'Edit Course',
                 'action'       => 'courses/edit/submit',
                 'hidden'       => array('user_id'   => $user['id'])
             ),
