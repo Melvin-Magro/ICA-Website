@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url("font/Gotham-Light.eot?#iefix") format("embedded-opentype"), url("font/Gotham-Light.woff") format("woff"), url("font/Gotham-Light.ttf") format("truetype"), url("font/Gotham-Light.svg#Gotham-Light") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .img-logo {
     max-width: 40%;
     height: auto;
@@ -61,6 +68,7 @@ section .col-md-3:first-child {
 
 #body-login {
     background: -moz-linear-gradient(top, #b883ba 0%, #DCDCDC 100%) no-repeat;
+    background: -webkit-linear-gradient(top, #b883ba 0%, #DCDCDC 100%) no-repeat;
     height: 725px;
 }
 
