@@ -165,7 +165,11 @@ class Courses extends MY_Controller { //changing the name of welcome to website
     public function edit_submit()
     {
         //load the form validation library
-		$this->load->library('form_validation');
+        if ($this->fv->run('edit_course') === FALSE)
+        {
+            echo validation_errors();
+            return;
+        }
 
 		// load the users_model
 		$this->load->model('course_model');
@@ -185,7 +189,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 		}
 
         $course_level = $this->input->post('course_level');
-		if (!empty($name)) {
+		if (!empty($course_level)) {
             $rules[] = array(
                 'field' => 'course_level',
 				'label' => 'course level',
@@ -196,13 +200,15 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 		$id = $this->input->post('user_id');
 
 		//set the rules
-		$this->form_validation->set_rules($rules);
+		$this->fv->set_rules($rules);
 
 		//check the form for validation errors
-		if ($this->form_validation->run() === FALSE) {
+		if ($this->fv->run() === FALSE) {
+            echo validation_errors(); die;
 			$this->edit($id);
 			return;
 		}
+
 
 		//reload the page
 		if (!$this->course_model->update_course($id, $course_name, $course_level)) {
@@ -239,6 +245,26 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 		$this->load->view('course_form', $data);
 	}
 
+    private function course_submit()
+	{
+		if ($this->fv->run('upload_course') === FALSE)
+        {
+            echo validation_errors();
+            return;
+        }
+
+		$course_name         = $this->input->post('course_name');
+        $course_level        = $this->input->post('course_level');
+
+		// loads the users_model file to use its functions
+        $this->load->model('course_model');
+
+        $this->course_model->add_course($course_name, $course_level);
+
+        redirect('courses/upload_course');
+
+	}
+
 	private function user_form($user = NULL) {
 
 		//if no information was provided, to BE SAFE
@@ -266,24 +292,6 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 		);
 	}
 
-	private function course_submit()
-	{
-		if ($this->fv->run('upload_course') === FALSE)
-        {
-            echo validation_errors();
-            return;
-        }
 
-		$course_name         = $this->input->post('course_name');
-        $course_level        = $this->input->post('course_level');
-
-		// loads the users_model file to use its functions
-        $this->load->model('course_model');
-
-        $this->course_model->add_course($course_name, $course_level);
-
-        redirect('courses/upload_course');
-
-	}
 
 }

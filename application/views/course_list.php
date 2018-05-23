@@ -12,7 +12,7 @@
 	<th>Course Name</th>
   	<th>Course Level</th>
 <?php if ($can_delete): ?>
-	<th>Actions</th>
+	<th colspan="2">Actions</th>
 <?php endif; ?>
   </tr>
   <tr>

@@ -53,5 +53,18 @@ $config = array(
 				'label' => 'course level',
 				'rules' => 'required|min_length[1]'
 			)
-        )
+        ),
+
+        'edit_course'     => array(
+                array(
+    				'field' => 'course_name',
+    				'label' => 'course name',
+    				'rules' => 'required|min_length[5]'
+    			),
+                array(
+    				'field' => 'course_level',
+    				'label' => 'course level',
+    				'rules' => 'required|min_length[1]'
+    			)
+            )
 );
