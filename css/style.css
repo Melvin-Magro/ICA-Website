@@ -74,7 +74,7 @@ section .col-md-3:first-child {
 
 #body-login .container {
     width: 320px;
-    height: 420px;
+    height: 400px;
     background: rgba(0, 0, 0, 0.5);
     color: black;
     top: 50%;
@@ -82,12 +82,11 @@ section .col-md-3:first-child {
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 10px 20px;
 }
 
 #body-login .card-container {
     font-family: Gotham-Light, Helvetica Neue;
-    padding-left: 20px;
+    padding-left: 65.6px;
 }
 
 #body-login .color-box {
@@ -95,21 +94,25 @@ section .col-md-3:first-child {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
-#body-login .color-box button {
-    border: none;
-    border-outline: none;
-    border-height: 40px;
-    border-background: grey;
-    border-color: #fff;
-    border-font-size: 15px;
-    border-border-radius: 15px;
-    border-width: 100%;
+#body-login .color-box label {
+    width: 100%;
+    width-margin-bottom: 10px;
+    color: #fff;
+    margin-bottom: 7px;
+}
+
+#body-login .color-box img {
+    border-radius: 5%;
 }
 
 #body-login .login-logo {
     width: 50%;
+    padding-right: 69px;
+    padding-bottom: 10px;
+    margin-left: -14px;
 }
 
 #body-login .profile-img-card {
@@ -121,8 +124,22 @@ section .col-md-3:first-child {
     width-left: calc(50% - 50px);
 }
 
-#body-login .formbutton {
-    background: black;
+#body-login button {
+    border: none;
+    outline: none;
+    height: 27px;
+    background: #808080;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 12px;
+    width: 156.8px;
+}
+
+#body-login button:hover {
+    cursor: pointer;
+    background: #ccc;
+    transition: all .2s;
+    color: #484848;
 }
 
 #customers {
