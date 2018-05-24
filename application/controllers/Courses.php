@@ -180,22 +180,7 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 		$rules = array();
 
 		$course_name = $this->input->post('course_name');
-		if (!empty($course_name)) {
-            $rules[] = array( //this is so if no changes have been made, data will remain the same. in the square brackets we have number of array (0,1,2 etc)
-                'field' => 'course_name',
-				'label' => 'course name',
-				'rules' => 'required|min_length[5]'
-			);
-		}
-
         $course_level = $this->input->post('course_level');
-		if (!empty($course_level)) {
-            $rules[] = array(
-                'field' => 'course_level',
-				'label' => 'course level',
-				'rules' => 'required|min_length[1]'
-			);
-		}
 
 		$id = $this->input->post('user_id');
 
@@ -216,9 +201,27 @@ class Courses extends MY_Controller { //changing the name of welcome to website
 			$this->edit($id);
 			return;
 
-	}
+	       }
 
-	$this->edit($id);
+	          $this->edit($id);
+
+              if ($course_level == 4)
+              {
+                  redirect('http://icawebsite.local/technical');
+              }
+              else if ($course_level == 6)
+              {
+                  redirect('http://icawebsite.local/university');
+              }
+              else if ($course_level == 2)
+              {
+                  redirect('http://icawebsite.local/foundation');
+              }
+              else if ($course_level == 1)
+              {
+                  redirect('http://icawebsite.local/part_time');
+              }
+
     }
 
 	public function upload_course($submit = FALSE)
