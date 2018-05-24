@@ -72,20 +72,57 @@ section .col-md-3:first-child {
     height: 725px;
 }
 
-#body-login .container .card, #body-login .container .card-container {
-    text-align: center;
-    padding-top: 10%;
+#body-login .container {
+    width: 320px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 10px 20px;
 }
 
-#body-login .container .card .color-box, #body-login .container .card-container .color-box {
+#body-login .card-container {
+    font-family: Gotham-Light, Helvetica Neue;
+    padding-left: 20px;
+}
+
+#body-login .color-box {
     padding: 30px 0 30px 0;
     width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#body-login .container .card .color-box .login-logo, #body-login .container .card-container .color-box .login-logo {
+#body-login .color-box button {
+    border: none;
+    border-outline: none;
+    border-height: 40px;
+    border-background: grey;
+    border-color: #fff;
+    border-font-size: 15px;
+    border-border-radius: 15px;
+    border-width: 100%;
+}
+
+#body-login .login-logo {
     width: 50%;
+}
+
+#body-login .profile-img-card {
+    width: 100px;
+    width-height: 100px;
+    width-border-radius: 50%;
+    width-position: absolute;
+    width-top: -50px;
+    width-left: calc(50% - 50px);
+}
+
+#body-login .formbutton {
+    background: black;
 }
 
 #customers {

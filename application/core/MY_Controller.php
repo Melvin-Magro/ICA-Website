@@ -151,7 +151,7 @@ class MY_Controller extends CI_Controller {
 		}
 		if ($this->check_login())
 		{
-			$nav3['Logout']			= 'system/logout';
+			$nav3['Logout']			= 'index.php/system/logout';
 		}
 		else
 		{
