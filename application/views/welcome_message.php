@@ -84,11 +84,11 @@
               <img class="img-fluid" src="<?php echo base_url('img/portfolio/thumbnails/1.jpg');?>" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
+                    <!--<div class="project-category text-faded">
+                      Category
+                  </div>-->
                   <div class="project-name">
-                    Project Name
+                    Francesco Theuma Carabez
                   </div>
                 </div>
               </div>
@@ -99,11 +99,11 @@
               <img class="img-fluid" src="<?php echo base_url('img/portfolio/thumbnails/2.jpg');?>" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
+                    <!--<div class="project-category text-faded">
+                      Category
+                  </div>-->
                   <div class="project-name">
-                    Project Name
+                    Rachel Fitz
                   </div>
                 </div>
               </div>
@@ -114,11 +114,11 @@
               <img class="img-fluid" src="<?php echo base_url('img/portfolio/thumbnails/3.jpg');?>" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
+                    <!--<div class="project-category text-faded">
+                      Category
+                  </div>-->
                   <div class="project-name">
-                    Project Name
+                    Melvin Magro
                   </div>
                 </div>
               </div>
@@ -129,11 +129,11 @@
               <img class="img-fluid" src="<?php echo base_url('img/portfolio/thumbnails/4.jpg');?>" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
+                    <!--<div class="project-category text-faded">
+                      Category
+                  </div>-->
                   <div class="project-name">
-                    Project Name
+                    Darren Camilleri
                   </div>
                 </div>
               </div>
@@ -144,11 +144,11 @@
               <img class="img-fluid" src="<?php echo base_url('img/portfolio/thumbnails/5.jpg');?>" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
+                    <!--<div class="project-category text-faded">
+                      Category
+                  </div>-->
                   <div class="project-name">
-                    Project Name
+                    Luke Parnis
                   </div>
                 </div>
               </div>
@@ -159,11 +159,11 @@
               <img class="img-fluid" src="<?php echo base_url('img/portfolio/thumbnails/6.jpg');?>" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
+                  <!--<div class="project-category text-faded">
                     Category
-                  </div>
+                </div>-->
                   <div class="project-name">
-                    Project Name
+                    Yannick Farrugia
                   </div>
                 </div>
               </div>

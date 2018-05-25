@@ -1,5 +1,4 @@
-<div class="cont">
-  <section id="sec1">
+  <section id="sec1" class="container-fluid">
     <div class="row">
 
 <?php foreach($nav as $col):?>
@@ -14,7 +13,6 @@
 
     </div>
   </section>
-</div>
 <!-- /container -->
 
   </body>
